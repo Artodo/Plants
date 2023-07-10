@@ -29,21 +29,22 @@ const gardens = document.querySelectorAll('.gardens-care');
 const planting = document.querySelectorAll('.planting');
 const lawn = document.querySelector('.lawn');
 const serviceFilter = document.querySelector('.service__btn-block');
-const garden = document.querySelector('#gardens');
+const gardenBtn = document.querySelector('#gardens');
 const lawnBtn = document.querySelector('#lawn');
-const service__card = document.querySelectorAll('.service__card')
+const plantingBtn = document.querySelector('#planting');
+const serviceCard = document.querySelectorAll('.service__card')
 
 
 function removeActive() {
-  garden.classList.remove('btnActiv');
+  gardenBtn.classList.remove('btnActiv');
   lawnBtn.classList.remove('btnActiv');
   document.querySelector('#planting').classList.remove('btnActiv');
 }
 
 
-garden.addEventListener('click', function () {
+gardenBtn.addEventListener('click', function () {
   removeActive();
-  service__card.forEach(
+  serviceCard.forEach(
     function (el) {
       el.classList.remove('blur');
     })
@@ -53,13 +54,13 @@ garden.addEventListener('click', function () {
       el.classList.add('blur');
     }
   )
-  garden.classList.add('btnActiv');
+  gardenBtn.classList.add('btnActiv');
 })
 
 
 lawnBtn.addEventListener('click', function () {
   removeActive();
-  service__card.forEach(
+  serviceCard.forEach(
     function (el) {
       el.classList.remove('blur');
     })
@@ -77,9 +78,9 @@ lawnBtn.addEventListener('click', function () {
 })
 
 
-document.querySelector('#planting').addEventListener('click', function () {
+plantingBtn.addEventListener('click', function () {
   removeActive();
-  service__card.forEach(
+  serviceCard.forEach(
     function (el) {
       el.classList.remove('blur');
     })
@@ -142,7 +143,7 @@ document.addEventListener('click', function (event) {
 
 /////////////////////////////////////////////////////////////////////////////
 
-const menuCity = document.querySelector('#city-list');
+const menuCity = document.querySelector('#cityList');
 const cityMenuItems = document.querySelectorAll(".city-item");
 const cityBtn = document.querySelector('.contacts__btn');
 

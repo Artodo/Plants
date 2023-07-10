@@ -16,13 +16,13 @@
     <div class="container">
       <div class="header-container">
         <div>
-          <img class="log" src="./assets/img/logo.png" alt="logo image"> <span class="logo-text">Plants</span>
+          <img class="logo" src="./assets/img/logo.png" alt="logo image"> <span class="logo-text">Plants</span>
         </div>
         <nav>
           <ul class="nav__list">
-            <li class="nav__item orange-text bolt">Home</li>
+            <li class="nav__item orange-text bold">Home</li>
             <li class="nav__item"><a href="#aboutBlock">About us</a></li>
-            <li class="nav__item"><a href="#serviseBlock">Service</a></li>
+            <li class="nav__item"><a href="#serviceBlock">Service</a></li>
             <li class="nav__item"><a href="#priceBlock">Price</a></li>
             <li class="nav__item"><a href="#contactsBlock">Contacts</a></li>
           </ul>
@@ -36,7 +36,7 @@
       <ul class="burger-menu" id="burgerMenu">
         <li><a class="burger-item hover-btn" href="#">Home</a></li>
         <li><a class="burger-item hover-btn" href="#aboutBlock">About us</a></li>
-        <li><a class="burger-item hover-btn" href="#serviseBlock">Service</a></li>
+        <li><a class="burger-item hover-btn" href="#serviceBlock">Service</a></li>
         <li><a class="burger-item hover-btn" href="#priceBlock">Price</a></li>
         <li><a class="burger-item hover-btn" href="#contactsBlock">Contacts</a></li>
       </ul>
@@ -46,7 +46,7 @@
     <section class="welcome">
       <div class="container">
         <div class="welcome__container">
-          <div class="welcome__img"> <img src="./assets/img/welcome-img.png" alt=" the plant"></div>
+          <div class="welcome__img"> <img src="./assets/img/welcome-img.png" alt="the plant"></div>
           <div class="welcome__content">
             <h1>We grow <span class="green-text">plants</span> and give you oxygen</h1>
             <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="service" id="serviseBlock">
+    <section class="service" id="serviceBlock">
       <div class="container">
         <div class="service__container">
           <div class="service__title">
@@ -146,7 +146,7 @@
             <h3 class="prices__title">Prices</h3>
             <div class="price-block">
               <div class="price-block-content" id="pricesBasics">
-                <button class="prices__btn" id="pricesBtnBasics" onClick="handleMenu(this)">Basics<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
+                <button class="prices__btn" id="pricesBtnBasics" type="button" onClick="handleMenu(this)">Basics<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
                 <div class="prices-menu" id="basicsMenu">
                   <p class="basics_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                   <p class="basics_price"><span class="orange-text">$15</span>/ per hour</p>
@@ -154,7 +154,7 @@
                 </div>
               </div>
               <div class="price-block-content" id="pricesStandard">
-                <button class="prices__btn" id="pricesBtnStandard" onClick="handleMenu(this)">Standard<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
+                <button class="prices__btn" id="pricesBtnStandard" type="button" onClick="handleMenu(this)">Standard<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
                 <div class="prices-menu" id="standardMenu">
                   <p class="basics_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                   <p class="basics_price"><span class="orange-text">$25</span>/ per hour</p>
@@ -162,7 +162,7 @@
                 </div>
               </div>
               <div class="price-block-content" id="pricesPro">
-                <button class="prices__btn" id="pricesBtnPro" onClick="handleMenu(this)">Pro care<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
+                <button class="prices__btn" id="pricesBtnPro" type="button" onClick="handleMenu(this)">Pro care<img class="btm-circle" src="./assets/img/ellipse.svg" alt="button"></button>
                 <div class="prices-menu" id="proMenu">
                   <p class="basics_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                   <p class="basics_price"><span class="orange-text">$35</span>/ per hour</p>
@@ -189,9 +189,9 @@
             <div class="city-card" id="cityCard">
               <div class="citi-info" id="cityInfo">
                 <div class="city-title">
-                  <p >City:</p>
-                  <p >Phone:</p>
-                  <p >Office adress:</p>
+                  <p>City:</p>
+                  <p>Phone:</p>
+                  <p>Office adress:</p>
                 </div>
                 <div class="city-text">
                   <p id="cityName">Canandaigua, NY</p>
@@ -201,7 +201,7 @@
               </div>
               <button class="city_btn">Call us</button>
             </div>
-            <div class="city-list" id="city-list">
+            <div class="city-list" id="cityList">
               <p class="city-item" onclick="openInfo('Canandaigua')">Canandaigua, NY</p>
               <p class="city-item" onclick="openInfo('NewYorkCity')">New York City</p>
               <p class="city-item" onclick="openInfo('Yonkers')">Yonkers, NY</p>
