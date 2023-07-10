@@ -38,7 +38,7 @@ const serviceCard = document.querySelectorAll('.service__card')
 function removeActive() {
   gardenBtn.classList.remove('btnActiv');
   lawnBtn.classList.remove('btnActiv');
-  document.querySelector('#planting').classList.remove('btnActiv');
+  plantingBtn.classList.remove('btnActiv');
 }
 
 
@@ -90,7 +90,7 @@ plantingBtn.addEventListener('click', function () {
       el.classList.add('blur');
     }
   )
-  document.querySelector('#planting').classList.add('btnActiv');
+  plantingBtn.classList.add('btnActiv');
 })
 
 // ................./////////////////////////////////////////////////////
@@ -146,15 +146,13 @@ document.addEventListener('click', function (event) {
 const menuCity = document.querySelector('#cityList');
 const cityMenuItems = document.querySelectorAll(".city-item");
 const cityBtn = document.querySelector('.contacts__btn');
-
+const CITY_ACTIVE_CLASS = 'city-list-active';
 
 function openCityMenu() {
-  if (menuCity.classList.contains('city-list-active')) {
-    menuCity.classList.remove('city-list-active');
-    // cityBtn.classList.remove('change');
+  if (menuCity.classList.contains(CITY_ACTIVE_CLASS)) {
+    menuCity.classList.remove(CITY_ACTIVE_CLASS);
   } else {
-    menuCity.classList.add('city-list-active');
-    // cityBtn.classList.add('change');
+    menuCity.classList.add(CITY_ACTIVE_CLASS);
   }
 }
 
