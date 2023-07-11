@@ -3,7 +3,6 @@ const menu = document.querySelector('#burgerMenu');
 const menuItems = document.querySelectorAll(".burger-item");
 const burgerBtn = document.querySelector('#burgerBtn');
 
-
 function openBurger() {
   if (menu.classList.contains('show-menu')) {
     menu.classList.remove('show-menu');
@@ -16,6 +15,7 @@ function openBurger() {
   }
 }
 
+
 burgerBtn.addEventListener('click', openBurger);
 
 
@@ -25,15 +25,12 @@ menuItems.forEach(
   });
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const gardens = document.querySelectorAll('.gardens-care');
-const planting = document.querySelectorAll('.planting');
-const lawn = document.querySelector('.lawn');
 const serviceFilter = document.querySelector('.service__btn-block');
 const gardenBtn = document.querySelector('#gardens');
 const lawnBtn = document.querySelector('#lawn');
 const plantingBtn = document.querySelector('#planting');
 const serviceCard = document.querySelectorAll('.service__card')
-
+const serviceBtnBlock = document.querySelector('.service__btn-block')
 
 function removeActive() {
   gardenBtn.classList.remove('btnActiv');
@@ -41,65 +38,43 @@ function removeActive() {
   plantingBtn.classList.remove('btnActiv');
 }
 
+function plantsClickHandler(event, activePlant) {
+  const allPlants = ['gardens-care', 'planting', 'lawn'];
+  const bluredPlants = allPlants.filter(item => item !== activePlant);
 
-gardenBtn.addEventListener('click', function () {
   removeActive();
   serviceCard.forEach(
     function (el) {
       el.classList.remove('blur');
-    })
-  lawn.classList.add('blur');
-  planting.forEach(
-    function (el) {
-      el.classList.add('blur');
-    }
-  )
-  gardenBtn.classList.add('btnActiv');
-})
+    });
 
+  bluredPlants.forEach(function (c) {
+    document.querySelectorAll(`.${c}`).forEach(
+      function (el) {
+        el.classList.add('blur');
+      }
+    );
+  });
 
-lawnBtn.addEventListener('click', function () {
-  removeActive();
-  serviceCard.forEach(
-    function (el) {
-      el.classList.remove('blur');
-    })
-  planting.forEach(
-    function (el) {
-      el.classList.add('blur');
-    }
-  );
-  gardens.forEach(
-    function (el) {
-      el.classList.add('blur');
-    }
-  )
-  lawnBtn.classList.add('btnActiv');
-})
+  event.target.classList.add('btnActiv');
+}
 
-
-plantingBtn.addEventListener('click', function () {
-  removeActive();
-  serviceCard.forEach(
-    function (el) {
-      el.classList.remove('blur');
-    })
-  lawn.classList.add('blur');
-  gardens.forEach(
-    function (el) {
-      el.classList.add('blur');
-    }
-  )
-  plantingBtn.classList.add('btnActiv');
-})
+gardenBtn.addEventListener('click', function (event) {
+  plantsClickHandler(event, "gardens-care");
+});
+lawnBtn.addEventListener('click', function (event) {
+  plantsClickHandler(event, "lawn");
+});
+plantingBtn.addEventListener('click', function (event) {
+  plantsClickHandler(event, "planting");
+});
 
 // ................./////////////////////////////////////////////////////
+
 
 const basicPrice = document.getElementById('pricesBasics');
 const standardPrice = document.getElementById('pricesStandard');
 const proPrice = document.getElementById('pricesPro');
-
-
 
 function removeActiveClasses(btn) {
   btn.classList.remove('active');
@@ -140,9 +115,7 @@ document.addEventListener('click', function (event) {
   }
 });
 
-
 /////////////////////////////////////////////////////////////////////////////
-
 const menuCity = document.querySelector('#cityList');
 const cityMenuItems = document.querySelectorAll(".city-item");
 const cityBtn = document.querySelector('.contacts__btn');
@@ -163,8 +136,8 @@ cityMenuItems.forEach(
   function (el) {
     el.addEventListener('click', openCityMenu);
   })
-///////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////
 const CITY = {
   Yonkers: {
     city: "Yonkers, NY",
@@ -206,6 +179,3 @@ function openInfo(key) {
   cityBtn.textContent = key;
   cityBtn.style.background = "#C1E698";
 }
-
-
-
