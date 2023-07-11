@@ -25,12 +25,10 @@ menuItems.forEach(
   });
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-const serviceFilter = document.querySelector('.service__btn-block');
 const gardenBtn = document.querySelector('#gardens');
 const lawnBtn = document.querySelector('#lawn');
 const plantingBtn = document.querySelector('#planting');
 const serviceCard = document.querySelectorAll('.service__card')
-const serviceBtnBlock = document.querySelector('.service__btn-block')
 
 function removeActive() {
   gardenBtn.classList.remove('btnActiv');
@@ -70,8 +68,6 @@ plantingBtn.addEventListener('click', function (event) {
 });
 
 // ................./////////////////////////////////////////////////////
-
-
 const basicPrice = document.getElementById('pricesBasics');
 const standardPrice = document.getElementById('pricesStandard');
 const proPrice = document.getElementById('pricesPro');
@@ -130,7 +126,6 @@ function openCityMenu() {
 }
 
 cityBtn.addEventListener('click', openCityMenu);
-
 
 cityMenuItems.forEach(
   function (el) {
